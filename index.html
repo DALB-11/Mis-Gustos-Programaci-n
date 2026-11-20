@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- permite mostrar correctamente los acentos
+     y caracteres especiales como la letra ñ -->
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ajusta el área de visualización al ancho de la pantalla-->
+    
+    <title>Página de Diego</title>
+    
+    <!-- Resume el contenido de la página, Google puede usarlo 
+     en sus resultados de busqueda -->
+     <meta name="description"
+     content="Págiina de Diego, donde comparto ms gustos por el deporte 
+     y el desarrollo personal">
+
+     <!-- name= "keywords" ayuda a los motores de busqueda a identificar 
+      el contenido de la página -->
+    <meta name="keywords"
+    content="Fitness, Food, Gym, Motocycles, perosnal growth">
+
+    <!-- name = "author" indica el autor de la página -->
+    <meta name="author" content="Diego A. López Benhumea">
+
+    <!-- Aviso de Contenido Propio -->
+    <meta name="copyright" content="© 2026 Diego A. López Benhumea. 
+    Todos los derechos reservados.">
+
+ <!-- ACTIVIDAD 3. Cargamos el CSS de Bootstrap desde Internet. -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">   
+    
+<!--Conectamos nuestro CSS, debe de coincidir en la misma carpeta HTML-->
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+
+    <div class="container my-4">
+
+    <!-- Contenido de la página, título principal de la página -->
+     <!-- style aplica en un estilo CSS y color del encabezado -->
+    <h1 id="inicio">Bienvenido a la Página de Diego</h1>
+    <!-- Este es un párrafo de ejemplo -->
+    <p>Esta es una simple página web creada con HTML.</p>
+
+    <!-- =========== ALERTA =========== -->
+     <div class="alert alert-info" role="alert">
+        ¡Bienvenido! Aquí comparto mis gustos por el gym,
+        el cine, la música y el desarrollo personal.
+    </div>
+    
+    <!-- ========== BOTONES PARA NAVEGAR ========== -->
+     <!-- href indica la ruta del archivo al que se quiere navegar
+      id= "pasatiempos"-->
+      <nav class="navbar navbar-expand-lg bg-light mb-4" 
+                  aria-label="Secciones de la página">
+          <div class="container-fluid">
+              <!-- href=#inicio lleva elemento con id="inicio "--> 
+              <a class="navbar-brand" href="#inicio"> Página de Diego </a>
+
+              <!-- #menu debe coincidir con el id de menu -->
+              <button class="navbar-toggler" 
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#menu"
+                  aria-controls="menu"
+                  aria-expanded="false"
+                  aria-label="Abrir o cerrar menu">
+                  <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="menu">
+             <div class="navbar-nav gap-2">
+                 <a href="#pasatiempos" class="btn btn-primary mb-2">
+                    Mis Pasatiempos
+                </a>
+                <a href="#comidas" class="btn btn-success mb-2">
+                    Mis Comidas Favoritas
+                </a> 
+                <a href="#planes" class="btn btn-warning mb-2">   
+                    Mis Planes Para Desconectarme
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>   
+    
+    <!-- ========== PRESENTACIÓN ========== -->
+    <!-- H2 Sirve para crear un subtítulo -->
+    <h2>Me gusta mucho mis clases de Boxeo</h2>
+    <!-- H3 Se puede organizar un subtema dentro del H2 -->
+    <h3>De comer me gustan mucho las Hamburguesas</h3>
+    <!-- H4 Se utiliza para subdividir aun mas el contenido
+      detalles menores-->
+    <h4>Me gusta mucho el cine y quiero ver la pelicula de Rocky lV</h4>
+    <!-- H5 Se usa para agregar detalles adicionales 
+     o información especifica -->
+    <h5>Me gusta mucho la música y mi generoo favorito es el Rock</h5>
+    <!-- H6 Se utiliza para notas o detalles 
+    adiciionales muy específicos -->
+    <h6>Mi pasatiempo favorito es ir al Gym</h6>
+    
+    <!-- ========== CARRUSEL ========== -->
+     <section class="mt-4">
+        <h2 class="text-primary">Mis gustos en imagenes</h2>
+        <!-- El carrusel crea el componente y slide agrega la transición
+         el id permite que las flechas encuentren el carrusel -->
+         <div id="carrusel" class="carousel slide bg-dark">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                        src="img/batman.jpeg"
+                        class="d-block w-100"
+                        alt="imagen de batman">
+                </div> 
+                <div class="carousel-item">
+                    <img
+                        src="img/indian.jpeg"
+                        class="d-block w-100"
+                        alt="imagen de moto">
+                </div>
+                <div class="carousel-item">
+                    <img              
+                        src="img/omega.avif"
+                        class="d-block w-100"
+                        alt="imagen de reloj">
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carousel"
+                    data-bs-slide="prev"
+                    aria-label="Imagen Anterior">
+                    <span class="carousel-control-prev-icon"
+                    aria-hidden="true"></span>
+            </button>
+            
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carrusel"
+                    data-bs-slide="next"
+                    aria-label="Imagen Siguiente">
+                    <span class="carousel-control-next-icon"
+                    aria-hidden="true"></span>
+            </button>
+        </div>
+        </section>            
+
+    <!-- ========== TARJETAS ========== -->
+     <section class="mt-4"> 
+        <h2 class="text-primary"> Acerca de mis gustos </h2>
+        <!-- Tarjeta básica card crea el contenedor -->
+         <div class="card mb-4">
+            <!-- card-body crea el contenido de la tarjeta -->
+             <div class="card-body">
+                <h5 class="card-title"> Programación </h5>
+                <p class="card-text"> Me gusta mucho la comida 
+                    y el desarrollo personal. </p>
+                    <!-- este enlace llleva a la tabla de mis planes -->  
+                <a href="#planes" class="btn btn-primary"> Conoce mis planes </a>
+            </div>
+        </div>
+        <!-- Tarjeta con Imagen de GymShark -->
+         <div class="card mb4">
+
+    
+    <!-- src es la ruta de la imagen, alt describe la imagen
+       width="300" le da un ancho de 300 pixeles a la imagen -->
+          <img src="https://www.aimeespinks.com/wp-content/uploads/2020/12/AdvertisingPhotography_Gymshark_Logo_009.jpg"
+          alt="Imagen de GymShark" 
+          width="300"
+          class="img-fluid">
+
+        <div class="card-body">
+            <h3 class="card-title">Gym</h3>
+            <p class="card-text">Me gusta mucho el gym y me gustaria entrenar en GymShark.</p>
+            <a href="#planes" class="btn btn-secondary">Conoce mis planes</a>
+        </div>
+    </div>
+    <!-- Trajeta con Imagen 
+         Usamos la Imagen de la Hamburguesa -->
+    <div class="card mb-4">
+        <img 
+            src="img/Hamburguesa.png"
+            alt="Imagen de Hamburguesa" 
+            width="300"
+            class="img-fluid">
+       <div class="card-body">
+           <h3 class="card-title">Hamburguesa</h3>
+           <p class="card-text">Me gustan las Hamburguesas y quiero una de Jhonny Rocket.</p>
+           <a href="#top comidas" class="btn btn-success"> Conoce mis gustos </a>
+        </div>
+    </div> 
+    <!-- Tarjeta con Imagen 
+         Usamos la de la NFL -->
+    <div class="card mb-4">              
+        <div class="card-header">
+            Foto iconica del jugador 54
+        </div>    
+        <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqLOvKXZJXmYlJXBXHkgZup3EqHxCQZXJ07x3RF893KQ&s=10"
+            alt="Imagen de NFL" 
+            width="200"
+            class="img-fluid">
+        <div class="card-body">
+            <h3 class="card-title"> The Best </h3> 
+            <p class="card-text"> mi equipo favorito domina la liga </p>
+                <a href="#showtime" class="btn btn-danger"> Conoce que veo en la TV </a>
+        </div>
+    </div>             
+
+
+<!-- LISTA NO ORDENADA -->
+<section>
+    <h2>Cosas que hago en mi tiempo libre</h2>
+<!-- ul crea una lista no ordenada, li crea un elemento de la lista -->
+  <ul>
+      <li> Ir al Gym </li>
+      <li> Ir al cine </li>
+      <li> Escuchar Música </li>
+      <li> Ver la NFL </li>
+      <li> Ir a mis clases de Boxeo </li>
+  </ul>    
+</section>
+
+<!-- LISTA ORDENADA -->
+ <section>
+    <h2> Mis comidas favoritas </h2>
+    <!-- ol crea una lista ordenada, li crea un elemento de la lista -->
+     <ol>
+         <li> Carne </li>
+         <li> Pastas </li>
+         <li> Pizzas </li>
+     </ol>
+ </section>
+ <!-- TABLA -->
+ 
+ <h2> Mis planes para desconectarme </h2>
+ <table border="1">
+    <!-- tr crea una fila de la tabla, th crea un encabezado de la tabla-->
+    <tr>
+        <th> Descubrir cosas nuevas </th>
+        <th> Leer literatura antigua </th>
+        <th> Tomar baños de sol </th>
+    </tr>
+    <!-- td crea una celda de la tabla -->
+    <tr>
+        <td> Ir de campamento </td>
+        <td> Pasear a Delta </td>
+        <td> Dar un paseo en moto </td>
+    </tr>
+    <tr>
+        <td> Hacer una carnita asada</td>
+        <td> Jugar videojuegos </td>
+        <td> Escribir pensamientos </td>
+    </tr>
+    <tr>
+        <td> Ver Deportes </td>
+        <td> Jugar cartas </td>
+        <td> Jugar Ajedrez </td>
+    </tr>
+ </table>
+
+<!-- ACTIVIDAD 3. Cargamos el JavaScript de Bootstrap.
+         Se usa en componentes interactivos, como los menús desplegables. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
